@@ -1,3 +1,8 @@
+/**
+ * this code is running on Web hoster's computer
+ */
+
+
 const express = require('express');
 
 //express is a function
@@ -20,6 +25,17 @@ app.get('/space-jams', (req, res)=> {
     <h1>Ready to Space Jam?</h1>
     <button> Jam Time </button>
     `)
+});
+
+// GET /comments endpoint
+/// localhost:5000/comments
+app.get('/comments', (req, res) => {
+res.send([
+    {
+        author: 'Chris',
+        message: 'New Space jams rocks, 1996 sucks'
+    }
+])
 });
 
 
